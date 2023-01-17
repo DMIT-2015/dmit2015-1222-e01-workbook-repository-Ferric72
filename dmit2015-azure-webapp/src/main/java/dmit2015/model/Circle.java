@@ -32,12 +32,12 @@ public class Circle {
         this.radius = radius;
     }
 
-    public double Area()
+    public double area()
     {
         return Math.PI * radius * radius;
     }
 
-    public double Perimeter()
+    public double perimeter()
     {
         return 2 * Math.PI * radius;
     }
@@ -47,14 +47,22 @@ public class Circle {
 
         System.out.println("The radius of the circle1 is" + circle1.getRadius());
         System.out.printf("The radius of the circle1 is %s\n", circle1.getRadius());
-        System.out.printf("The area of the circle1 is %.5f\n", circle1.Area());
-        System.out.printf("The radius of the circle1 is %.2f\n", circle1.Perimeter());
+        System.out.printf("The area of the circle1 is %.5f\n", circle1.area());
+        System.out.printf("The radius of the circle1 is %.2f\n", circle1.perimeter());
 
-        circle1.setRadius(5);
+        try
+        {
+            circle1.setRadius(5);
+            System.out.println("An exception should have been thrown");
+        }
+        catch (Exception ex)
+        {
+            System.out.println(ex.getMessage());
+        }
 
         System.out.printf("The radius of the circle1 is %s\n", circle1.getRadius());
-        System.out.printf("The area of the circle1 is %.5f\n", circle1.Area());
-        System.out.printf("The radius of the circle1 is %.2f\n", circle1.Perimeter());
+        System.out.printf("The area of the circle1 is %.5f\n", circle1.area());
+        System.out.printf("The radius of the circle1 is %.2f\n", circle1.perimeter());
 
         try
         {
@@ -65,6 +73,6 @@ public class Circle {
         {
             System.out.println(ex.getMessage());
         }
-        
+
     }
 }
