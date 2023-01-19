@@ -37,7 +37,12 @@ public class Circle {
         return Math.PI * radius * radius;
     }
 
-    public double perimeter()
+    public double diameter()
+    {
+        return 2 * radius;
+    }
+
+    public double circumference()
     {
         return 2 * Math.PI * radius;
     }
@@ -48,7 +53,7 @@ public class Circle {
         System.out.println("The radius of the circle1 is" + circle1.getRadius());
         System.out.printf("The radius of the circle1 is %s\n", circle1.getRadius());
         System.out.printf("The area of the circle1 is %.5f\n", circle1.area());
-        System.out.printf("The radius of the circle1 is %.2f\n", circle1.perimeter());
+        System.out.printf("The radius of the circle1 is %.2f\n", circle1.circumference());
 
         try
         {
@@ -62,7 +67,7 @@ public class Circle {
 
         System.out.printf("The radius of the circle1 is %s\n", circle1.getRadius());
         System.out.printf("The area of the circle1 is %.5f\n", circle1.area());
-        System.out.printf("The radius of the circle1 is %.2f\n", circle1.perimeter());
+        System.out.printf("The radius of the circle1 is %.2f\n", circle1.circumference());
 
         try
         {
