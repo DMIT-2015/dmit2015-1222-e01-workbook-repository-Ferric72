@@ -1,11 +1,31 @@
 package dmit2015.model;
 
+/**
+ * This class models a Circle shape.
+ *
+ * @author Stephen Toliver
+ * @version 2023-01-20
+ */
 public class Circle {
+
+    /**
+     * The radius of this circle.
+     */
     private double radius;
 
+    /**
+     * Returns the radius of this circle
+     * @return the radius of this circle
+     */
     public double getRadius() {
         return radius;
     }
+
+    /**
+     * Change the radius of this circle
+     * @param radius the new radius of this circle
+     * @throws Exception
+     */
 //  CHECKED exception example
     public void setRadius(double radius) throws Exception {
         if (radius <= 0)
@@ -24,24 +44,43 @@ public class Circle {
 //        this.radius = radius;
 //    }
 
+    /**
+     * Creates a circle with radius of 1
+     */
     public Circle() {
         this.radius = 1;
     }
 
+    /**
+     * Creates a circle with a specific radius
+     * @param radius the new circle's radius
+     */
     public Circle(double radius) {
         this.radius = radius;
     }
 
+    /**
+     * Compute and return the area of this circle
+     * @return the diameter of this circle
+     */
     public double area()
     {
         return Math.PI * radius * radius;
     }
 
+    /**
+     * Computes and returns the diameter of this circle
+     * @return the diameter of this circle
+     */
     public double diameter()
     {
         return 2 * radius;
     }
 
+    /**
+     * Computes and returns the circumference of this circle
+     * @return the circumference of this circle
+     */
     public double circumference()
     {
         return 2 * Math.PI * radius;
