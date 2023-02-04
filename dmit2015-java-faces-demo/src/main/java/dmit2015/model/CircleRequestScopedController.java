@@ -15,21 +15,24 @@ public class CircleRequestScopedController {
 
     @Getter
     @Setter
-    private Circle currentCircle = new Circle();
+    private double radius;
 
     public String showArea() {
+        var currentCircle = new Circle();
         Messages.addGlobalInfo("The area of a circle with a {0} radius is {1}",
                 currentCircle.getRadius(), currentCircle.area());
         return null;
     }
 
     public String showDiameter() {
+        var currentCircle = new Circle();
         Messages.addGlobalInfo("The diameter of a circle with a {0} radius is {1}",
                 currentCircle.getRadius(), currentCircle.diameter());
         return null;
     }
 
     public String showCircumference() {
+        var currentCircle = new Circle();
         Messages.addGlobalInfo("The circumference of a circle with a {0} radius is {1}",
                 currentCircle.getRadius(), currentCircle.circumference());
         return null;
